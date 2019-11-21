@@ -11,7 +11,8 @@ LABEL "com.github.actions.color"="gray-dark"
 
 # Install curl
 RUN apt-get update && apt-get install -y curl ruby-full git
-RUN git checkout https://github.com/Fishwaldo/Bamboo-PR-Trigger.git && cd Bamboo-PR-Trigger && bundler install 
+RUN git checkout https://github.com/Fishwaldo/Bamboo-PR-Trigger.git 
+RUN cd Bamboo-PR-Trigger && bundler install 
 
 
 # Add the entry point
