@@ -10,8 +10,8 @@ LABEL "com.github.actions.icon"="message-square"
 LABEL "com.github.actions.color"="gray-dark"
 
 # Install curl
-RUN apt-get update && apt-get install -y curl ruby-full git
-RUN git checkout https://github.com/Fishwaldo/Bamboo-PR-Trigger.git 
+RUN apt-get update && apt-get install -y curl ruby-full git bundler
+RUN git clone https://github.com/Fishwaldo/Bamboo-PR-Trigger.git 
 RUN cd Bamboo-PR-Trigger && bundler install 
 
 
