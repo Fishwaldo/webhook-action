@@ -10,7 +10,9 @@ LABEL "com.github.actions.icon"="message-square"
 LABEL "com.github.actions.color"="gray-dark"
 
 # Install curl
-RUN apt-get update && apt-get install -y curl
+RUN apt-get update && apt-get install -y curl ruby-full
+RUN git checkout https://github.com/Fishwaldo/Bamboo-PR-Trigger.git && cd Bamboo-PR-Trigger && bundler install 
+
 
 # Add the entry point
 ADD entrypoint.sh /entrypoint.sh
